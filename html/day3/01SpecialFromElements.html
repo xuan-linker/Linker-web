@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Document特殊表单元素</title>
+	</head>
+	<body>
+		<form action="">
+			专业：
+			<select name="degree">
+				<option value="0">--请选择品种--</option>
+				<option value="dog">狗</option>
+				<option value="cat">猫</option>
+				<option value="cow">牛</option>
+				<option value="tiger" selected">Tiger</option>
+			</select>
+			<br />
+			
+			城市：
+			<select name="city">
+				<optgroup label="浙江">
+					<option value="hangzhou">杭州</option>
+					<option value="ningbo">宁波</option>
+					<option value="huzhou">湖州</option>
+					<option value="wenzhou">温州</option>
+				</optgroup>
+				<optgroup label="北京"></optgroup>
+					<option value="chaoyang">朝阳</option>
+					<option value="xicheng">西城</option>
+					<option value="dongcheng">东城</option>
+			</select>
+			<br />
+			服务协议：
+			<textarea name="intro" rows="10" cols="50" readonly>
+				请遵守本网站的相关协议和国家的法规。。。。
+				请遵守本网站的相关协议和国家的法规。。。。
+					请遵守本网站的相关协议和国家的法规。。。。
+							请遵守本网站的相关协议和国家的法规。。。。
+			</textarea>
+			<br />
+			
+			<input type="submit" />
+		</form>
+	</body>
+</html>
