@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+/* 	父容器:
+	1.溢出隱藏
+	2.設置容器的内邊距,用來空來位置放置左右2個邊欄 */
+
+#wrapper {
+	overflow: hidden;
+	padding: 0 200px;
+	min-width: 300px;
+	border: 1px solid #ccc;
+}
+
+/* 主體:
+	1.寬度自適應
+	2.浮動佈局 */
+#wrapper .main {
+	width: 100%;
+	height: 300px;
+	background: green;
+	float: left;
+}
+
+	/* 邊欄:
+	1.邊欄寬度比容器内邊距小10px,用來實現與主體隔開
+	2.浮動佈局 */
+	
+#wrapper aside{
+	width: 190px;
+	height: 300px;
+	background: blue;
+	float: left;
+	position: relative;
+}
+
+/* 	左邊欄
+	1.移動到主内容位置:主内容自適應,寬度為100%,所以使用相對值100%
+	2.再移動到做左邊,使用相對位置 */
+#wrapper .left{
+	margin-left: -100%;
+	left: -200px;
+	
+}
+
+#wrapper .right{
+	margin-left: -190px;
+	left: 200px;
+}
