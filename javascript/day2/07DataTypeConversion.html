@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Document</title>
+		<script type="text/javascript">
+			/*
+					强制类型转换：
+					1.转换为number
+					2.转换为string
+					3.转换为boolean
+			*/
+			//1.转换number
+			var a = "12";
+
+			//1
+			a = Number("12"); //12
+
+			// var a=Number("hello"); //NaN
+			// var a=Number("abc123"); //NaN
+			// var a=Number("123abc"); //NaN
+
+			//2.使用parseInt()
+			a = parseInt(a);
+			//var a=parseInt("12.5"); //12，返回整数，不会四舍五入
+			// var a=parseInt("hello"); //NaN
+			// var a=parseInt("abc123"); //NaN
+			//var a=parseInt("123abc"); //123，按字符顺序进行解析
+			// var a=parseInt("123abc456"); //123
+
+			// 方法三：使用parseFloat
+			a = parseFloat(a);
+			var a = parseFloat("12.2");
+			var a = parseFloat("123aaa"); //123，按字符顺序进行解析
+			console.log(a);
+			console.log(typeof a);
+
+			// var a = false;
+			// a = Number(a); //boolean在内存中用数字表示，1(true)、0(false)
+
+			// console.log(a);
+			// console.log(typeof a);
+
+			//2.转换string
+			var a = 123;
+			//1.拼接空字符串
+			a = a + "";
+			//使用String()
+			a = String(a);
+			b = String(b);
+			//使用toString();
+			a = a.toString();
+
+			//3.转换为boolean，使用Boolean()
+			//结论：false、0、NaN、Undefined和""空字符串会被转换成false，其他数据都会被转换为true
+			//var a=false;
+			// var a=0;
+			// var a=NaN;
+			// var a;
+			// var a="";
+			// var a=12;
+			// var a="hello";
+			// a=Boolean(a);
+
+			// console.log(a);
+			// console.log(typeof a);
+			// console.log(b);
+			// console.log(typeof b);
+
+			/**
+			 * 自动类型转换（隐式转换）
+			 * 转换为number
+			 */
+
+			var a = "12";
+			a = +a;
+			var b = a * 2;
+			var c = a / 2;
+			var b = a % 2;
+			var c = a > 5 ? "a大于5" : "a不大于5";
+			console.log(c);
+
+			console.log(a);
+			console.log(b);
+			console.log(c);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

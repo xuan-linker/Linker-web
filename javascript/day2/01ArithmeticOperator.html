@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>算术运算符</title>
+		<script type="text/javascript">
+			//+加法
+			var a = 12;
+			var b = 5;
+			var c = "8";
+			// console.log(a+b); //17
+			// console.log(a+b+c); //178
+			// console.log(c+a+b); //8125
+			// console.log(c+(a+b)); //使用小括号改变运算优先级
+			// console.log(typeof (a+b+c)); //string
+
+			//- 减法
+			var d = "hello";
+			var e;
+			// console.log(a - b);
+			// console.log(a - c);
+			// console.log(a-d);
+			// console.log(a-e);
+			// console.log(typeof(a-d));//NaN表示非数字，自身为Number类型，表示数值的不正常状态
+			// //使用isNaN()判断参数是否为非数字
+			// console.log(isNaN("xlccc")); //如果不是数字，返回true
+			// console.log(isNaN(6)); //如果是数字，返回false
+			// console.log(isNaN(a-d));
+
+			// * 乘法
+			var x = 2;
+			var y = 6;
+			// console.log(a*b);
+			// console.log(a+b*x+y*a);//12+5*x+6*12
+
+			// /除法
+			var z = 0;
+			// console.log(a / b);
+			// console.log(y / x);
+			// console.log(x / z); //除数不能为0，返回undefined 、Infinity
+
+			// % 取余 ，求模、
+			// console.log(a%b);
+			// console.log(y%x);
+			//提示用户输入HTML和JS成绩，计算总分和平均分
+
+			var html = prompt("Html score");
+			var js = prompt("js score");
+			html = Number(html);
+			js = Number(js);
+
+			console.log(html + js);
+			console.log((html + js) / 2);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

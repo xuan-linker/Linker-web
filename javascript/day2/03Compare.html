@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			//比较运算符号，关系运算符，结果是boolean
+			var a = 2;
+			var b = 3;
+
+			console.log(a > b);
+			console.log(a < b);
+			console.log(a >= b);
+			console.log(a <= b);
+			console.log(a == b);
+
+			var m = 6;
+			var n = 6;
+			var o = "6";
+
+			var i = m == o;
+			var j = m === o;
+			console.log("---" + i);
+			console.log(j);
+
+			var p = 1; // number 
+			var q = true; // boolean在内存中boolean类型以数字来存储，true 为1 ，false 为 0 
+
+			console.log(p == q);
+			console.log(p === q);
+
+			//不等!=,只判断内容是否不相等
+			console.log(m != o);
+
+			//!==不全等，既要判断内容， 也要判断数据类型， 只要有任何一个不相同，返回true
+			console.log(m !== o);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
