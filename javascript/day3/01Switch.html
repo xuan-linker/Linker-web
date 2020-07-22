@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>DocumentSwitch</title>
+		<script type="text/javascript">
+			var today = Number(prompt("今天星期(1-7):"));
+			if (today == 1) {
+				console.log("今天是1");
+			} else if (today == 2) {
+				console.log("今天是2");
+			} else if (today == 3) {
+				console.log("今天是3");
+			} else if (today == 4) {
+				console.log("今天是4");
+			} else if (today == 5) {
+				console.log("今天是5");
+			}
+
+
+			//switch
+			switch (today) {
+				case 1:
+					console.log("1");
+					break;
+				case 2:
+					console.log("2");
+					break;
+				case 3:
+				case 4:
+					console.log("4");
+				default:
+					console.log("肚子好饿");
+					break;
+			}
+
+			switch (today) {
+				default:
+					console.log("？？");
+				case 1:
+					console.log("111");
+			}
+			/*
+					输入赵本山的考试成绩，显示所获奖励
+					成绩==100分，爸爸给他买辆车
+					成绩>=90分，妈妈给他买MP4
+					90分>成绩>=60分，妈妈给他买本参考书
+					成绩<60分，什么都不买
+					/
+			
+					结论：switch一般用于等值的判断，更直观
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

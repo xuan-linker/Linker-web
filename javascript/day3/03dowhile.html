@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Document</title>
+		<script type="text/javascript">
+			//do...while先执行，在判断
+
+			//循环输出10次hello js
+			// var i = 1;
+			// do {
+			// 	document.write("Hello js ");
+			// 	i++;
+			// }
+			// while (i < 10);
+
+			// //计算1-50 中 6的倍数
+			// var i = 1;
+			// var sum = 0;
+			// do {
+			// 	if (i % 6 == 0) {
+			// 		sum += i;
+			// 	}
+			// 	i++;
+			// } while (i <= 50);
+			// console.log(sum);
+
+			//循环提示用户输入整数，直到输入数字0为止，然后输出其中的最大值和最小值
+			//假设用户输入的第一个数字，既是最大值，也是最小值
+			// var num = Number(prompt("请输入一个整数"));
+			// var max = num;
+			// var min = num;
+			// while(num != 0) {
+			// 	document.write(num + "<br/>");
+			// 	var num = Number(prompt("请输入一个整数"));
+			// 	if(num > max){
+			// 		max = num ; 
+			// 	}
+			// 	if(num < min ){
+			// 		min = num ;
+			// 	}
+			// }
+			// console.log("MAX"+max);
+			// console.log("MIN"+min);
+			var num = Number(prompt("请输入一个整数"));
+			var max = num;
+			var min = num;
+			var flag = true ;
+			do{
+				document.write(num + "<br/>");
+					var num = Number(prompt("请输入一个整数"));
+					if(num == 0){
+						flag = false;
+					}
+					if(num > max){
+						max = num ; 
+					}
+					if(num < min ){
+						min = num ;
+					}
+			}while(flag);
+			console.log("MAX"+max);
+			console.log("MIN"+min);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

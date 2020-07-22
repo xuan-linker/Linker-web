@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Document For ... in</title>
+		<script type="text/javascript">
+			//for...in 循环, 用来对集合中的数据进行遍历
+			var str ="HelloWorld";
+			for(var index in str){
+				console.log(index);
+				console.log(str[index]);
+			}
+			
+			//提示用户输入一段英文，统计并输出其中元音字母（aeiou）的个数
+			var english = prompt("请输入一段英文：");
+			var count = 0 ;
+			for(var str in english){
+				var s = english[str] ;
+				if(s =='a'|| s == 'e'
+				 || s == 'i'
+				 || s == 'o'
+				 || s == 'u'){
+					 count ++;
+					 console.log(s);
+				 }
+			}
+			console.log(count);
+			
+			//在ES6中新增for...of循环
+			for(var e of english){
+				console.log(e);
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

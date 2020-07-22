@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			// 1.提示用户输入一个整数，如:237849172，将其倒序输出271948732
+			var str = "";
+			var a = prompt("请输入一个正整数");
+			console.log(a);
+			var temp;
+			while (a > 0) {
+				temp = a % 10;
+				a = parseInt(a/10);
+				console.log(temp);
+				str += temp;
+			}
+			console.log(str);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

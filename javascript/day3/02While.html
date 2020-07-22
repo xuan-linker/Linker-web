@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Document while</title>
+		<script type="text/javascript">
+			//循环结构：while、do...while、for
+
+			//while
+			// var i = 1;
+			// while (i <= 10) {
+			// 	console.log("Hello JS");
+			// 	document.write("Hello JS<br/>");
+			// 	alert("Hello JS");
+			// 	i++;
+			// }
+
+			// //计算100以内所有整数和
+			// var j = 1;
+			// var sum = 0;
+			// while (j <= 100) {
+			// 	sum += j;
+			// 	j++;
+			// }
+			// console.log(sum);
+
+			//计算100以内所有奇数和
+			// var j = 1;
+			// var sum = 0;
+			// while (j <= 100) {
+			// 	if (j % 2 != 0) {
+			// 		sum += j;
+			// 	}
+			// 	j++;
+			// }
+			// console.log(sum);
+
+			//打印输出[1,200]之间能被7整除，但不能被4整除的所有整数，并统计个数
+			//额外要求：输出时每行显示5个
+			var number = 0;
+			var i = 1;
+			while (i <= 200) {
+				if ((i % 7 == 0) && (i % 4 != 0)) {
+					document.write(i+"&nbsp;&nbsp;&nbsp;&nbsp;");
+					number++;
+					if (number % 5 == 0) {
+						document.write("<br/>");
+					}
+				}
+				i++;
+			}
+				document.write("<br/>共计："+count+"个!");
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
