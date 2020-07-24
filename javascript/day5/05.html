@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			//特定计算eval()，用于计算某个字符串，并执行其中的的JavaScript代码
+			// var str = "5+8";
+			// console.log(eval(str));
+
+			// var x = 5,
+			// 	y = 8;
+			// //var str="x+y";
+			// var str = "if(x>y){x*x}else{y*y}";
+			// console.log(eval(str));
+
+			// eval("var a=6;alert(a);");
+
+			//isNaN()
+			console.log(isNaN(12)); //false
+			console.log(isNaN("aa")); //true
+			var a;
+			console.log(isNaN(a)); //true
+			console.log(isNaN(null)); //false
+			console.log(parseInt(null)); //NaN
+			console.log(+null); //0
+			console.log(null + 4); //null不是数字，但在运算时会被转化为0
+
+			//isFinite()
+			console.log(isFinite(12));
+			console.log(isFinite("aa"));
+			console.log(isFinite(5 / 0));
+			console.log(5 / 0); //无限大，无穷大
+			
+			
+			var str = "linker-xlccc";
+			var s1 = encodeURI(str); //使用ISO8859-1编码
+			console.log("s1+"+s1);
+			var s2 = decodeURI(s1); //解码
+			console.log(s2);
+
+			var s3 = escape(str);
+			console.log(s3); //使用Unicode编码
+			var s4 = unescape(s3);
+			console.log(s4); //解码
+			
+			
+			function calcSum() {
+				var sum = 0;
+				for (var i = 1; i <= 100; i++) {
+					sum += i;
+				}
+				console.log(sum);
+			}
+			//2.调用函数
+			calcSum();
+			//定义带一个参数的函数
+			function calcSum2(n) {
+				var sum = 0;
+				for (var i = 1; i <= n; i++) {
+					sum += i;
+				}
+				console.log("从1到" + n + "之和为：" + sum);
+			}
+
+			calcSum2(20);
+
+			calcSum2(1000)
+
+			//定义带多个参数的函数
+			function calcSum3(m, n) { //多个形参以逗号隔开
+				var sum = 0;
+				for (var i = m; i <= n; i++) {
+					sum += i;
+				}
+				console.log("从" + m + "到" + n + "之和为：" + sum);
+			}
+
+			calcSum3(5, 10);
+		</script>
+	</head>
+	<body>
+		<!-- <form action="">
+			<input type="text" name="username" />
+			<input type="submit" value="提交" />
+		</form> -->
+	</body>
+</html>
