@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<script type="text/javascript">
+			/*function show(){
+			console.log("页面被第"+i+"次点击！");
+			i++;
+		}*/
+
+			function show(count) {
+				if (i <= count) {
+					console.log("页面被第" + i + "次点击！");
+					i++;
+				}
+			}
+
+			//window.onclick=show;
+			window.onclick = function() { //如果回调函数需要传递参数，可以使用匿名函数来包裹函数，进行传参
+				show(5);
+			};
+
+
+
+			//3.自定义函数，实现复制数组的功能，带两个参数
+			function copyArray(src, dest) {
+				for (var i = 0; i < src.length; i++) {
+					dest[i] = src[i];
+				}
+			}
+			var nums = [12, 4, 23, 520, 37, 0, 2];
+			var myNums = [];
+			console.log(myNums);
+			copyArray(nums, myNums);
+			console.log(myNums); //数组是一个引用数据类型（后面会详细讲解）
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>

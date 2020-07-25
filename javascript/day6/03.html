@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>变量的作用域</title>
+		<script type="text/javascript">
+			//1.全局变量和局部变量
+
+			var name = "tom"; //全局变量
+
+			function show1() {
+				var age = 12; //局部变量
+
+			}
+			//2.就近原则
+			/*var hobby="吃饭";
+			function show(){
+				var hobby="睡觉";
+				console.log("局部变量："+hobby);
+				console.log("全局变量："+window.hobby);
+				console.log("全局变量："+this.hobby);
+			}
+			show();*/
+
+
+			//3.在ES6之前，JavaScript中没有块级作用域的概念
+			/*function show(){
+				for(var i=1;i<=10;i++){
+					var name="宝宝"; //局部变量，在函数内部都可以访问
+					console.log(name+" 心里苦+"+i);
+				}
+				console.log(name); //依然可以访问name
+			}
+			show();
+			console.log(name);*/
+
+			/*
+						ES6中新增let命令，用来声明变量
+					*/
+			//1.支持块级作用域
+			/*function show(){
+				for(let i=1;i<=10;i++){
+					let name="宝宝"; //局部变量，只在for循环中可以访问
+					console.log(name+" 心里苦+"+i);
+				}
+				console.log(name); //不可以
+				console.log(i); //不可以
+			}
+			show();
+			
+				/*
+						ES6中新增const命令，用来声明常量
+					*/
+			const a = 5;
+			console.log(a); //5
+			a = 9; //对常量重新赋值虽然不会报错，但不会生效
+			console.log(a); //5
+
+			{
+				const PI = 3.14; //常量名一般全大写
+				console.log(PI);
+			}
+			console.log(PI); //不可以，只在声明的代码块中有效，也是块级作用域
+
+			//变量提升：函数声明和变量声明总是会被解释器悄悄地被"提升"到方法体的最顶部。
+
+
+			/*
+					总结：JavaScript中var、let、const区别
+					1.使用var声明的变量，其作用域为该语句所在的函数内，且存在变量提升现象
+					2.使用let声明的变量，其使用域为该语句所在的代码块内，不存在变量提升
+					3.使用const声明的常量，只能在声明时赋值，不能再次修改该常量的值
+					注：let和const是ES6中新增的关键字
+				*/
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

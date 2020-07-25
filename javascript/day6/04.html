@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>变量提升</title>
+		<script type="text/javascript">
+			//思考一：结果undefined
+			// var num = 10;
+			// fun();
+
+			// function fun() {
+			// 	console.log(num);
+			// 	var num = 20;
+			// }
+
+
+			//第一步：预解析(全局作用域)
+			// var num;
+
+			// function fun() {
+			// 	//第三步：当执行函数时，再次进行预解析(局部作用域)
+			// 	var num;
+			// 	//第四步：一行一行执行代码
+			// 	console.log(num);
+			// 	num = 20;
+			// 	console.log(num);
+			// }
+			// //第二步：一行一行执行代码
+			// num = 10;
+			// fun();
+
+
+
+
+			//思考二：结果undefined、9
+			var a = 18;
+			f1();
+
+			function f1() {
+				var b = 9;
+				console.log(a);
+				console.log(b);
+				var a = '123';
+			}
+
+			//第一步：预解析
+			var a;
+			//第三步：当执行函数时，再次进行预解析(局部作用域)
+			function f1() {
+				var b;
+				var a;
+				//第四步：一行一行执行代码	
+				b = 9;
+				console.log(a);
+				console.log(b);
+				a = '123';
+			}
+			//第二步：一行一行执行代码
+			a = 18;
+			f1();
+			/*
+				  区分：没有声明变量和变量未赋值
+				       1.如果没有声明变量就直接使用，报错：Uncaught ReferenceError: a is not defined
+				       2.声明了变量，但未赋值，输出：undefined
+				*/
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

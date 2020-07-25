@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>函数的用法</title>
+		<script type="text/javascript">
+			//1.形参和实参匹配问题
+
+			function show(name, age) {
+				console.log("my name：" + name + "age:" + age);
+			}
+
+			show("xixi", "21");
+			//在JavaScript中，实参的个数可以和形参的个数不相等
+			show("xixi");
+			show("xixi", "22", "22");
+			show();
+
+			//2.javascript 中没有重载的概念
+			function calc(num1, num2, num3) {
+				console.log(num1 * num2 * num3);
+			}
+
+			function calc(num1, num2) {
+				console.log(num1 * num2);
+			}
+
+			calc(3, 5); //8
+			calc(2, 2, 3) //4
+			calc(4); //NaN
+			calc(2, 2, 3, 3); //4*/
+
+			//3.对函数的参数进行处理
+			function calcSum(num1, num2) {
+				//如果参数为undefined、null、""、NaN、0时，则默认设置为0
+				if(!num1){
+					num1=0;
+				}
+				if(!num2){
+					num2=0;
+				}
+				num1 = num1 || 0;
+				num2 = num2 || 0;
+				//如果参数为非空字符串，则提示用户进行拼接，并输出结果
+				if (isNaN(num1) || isNaN(num2)) {
+					console.log("进行拼接操作：");
+				}
+
+				var sum = num1 + num2;
+				console.log(sum);
+			}
+			// calcSum(3,6);
+			// calcSum(5);
+			// calcSum(5,null);
+			// calcSum(5,"");
+			calcSum(5,NaN);
+			calcSum(5,"hello");
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

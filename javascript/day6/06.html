@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>回调函数</title>
+		<script type="text/javascript">
+			function show1(){
+				console.log("wel1");
+			}
+			function show2(){
+				alert("wel2");
+			}
+			
+			window.onclick = show2;
+		</script>
+	</head>
+	<body>
+			<input type="button" value="点我" onclick="alert('被点击了！')" />
+			<input type="button" value="按钮1" onclick="show1()" />
+	</body>
+</html>
