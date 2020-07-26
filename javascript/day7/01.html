@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Windows对象的属性和方法</title>
+		<script type="text/javascript">
+			//windows对象的属性，用法：对象名，属性名
+			//由于window对象是顶层对象，所以可以省略
+
+			//screen属性
+			console.log(window.screen);
+			var s = window.screen;
+			console.log("屏幕分辨率：" + s.width + "*" + s.height);
+			console.log("屏幕分辨率：" + window.screen.width + "*" + window.screen.height);
+			console.log("屏幕分辨率：" + screen.width + "*" + screen.height);
+
+			//window对象的方法，用法：对象名，方法名（）
+			function doAlert() {
+				alert("这是alert");
+			}
+
+			function doPrompt() {
+				var name = window.prompt("输入用户名");
+				if (name == null) {
+					console.log("用户取消了输入操作");
+				} else {
+					console.log(name);
+				}
+			}
+
+			function doConfim() {
+				var flag = confirm("您确定要关闭吗");
+				if (flag) {
+					console.log("guna");
+				} else {
+					console.log("不关");
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="测试alert" onclick="doAlert()" />
+		<input type="button" value="测试prompt" onclick="doPrompt()" />
+		<input type="button" value="测试confim" onclick="doConfim()" />
+	</body>
+</html>

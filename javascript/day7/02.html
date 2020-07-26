@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>window对象的窗口方法</title>
+		<script type="text/javascript">
+			function doOpen() {
+				open("01.html", "page1", "width=300,heigh=300,resizable=no");
+			}
+
+			function doDialog() {
+				window.showModalDialog("01.html", "page1");
+			}
+
+			function doClose() {
+				close();
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="open" onclick="doOpen()" />
+		<input type="button" value="dialog" onclick="doDialog()" />
+		<input type="button" value="close" onclick="doClose()" />
+	</body>
+</html>
